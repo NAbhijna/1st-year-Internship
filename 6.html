@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <title>SCORE</title>
+    <link rel="stylesheet" href="css/score.css" media="screen">
+    <link rel="stylesheet" href="css/media.css" media="screen">
+    <script class="u-script" type="text/javascript" src="js/jquery_score.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="js/score.js" defer=""></script>
+
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i">
+
+
+
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="10">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body class="u-body u-xl-mode" data-lang="en">
+    <section class="u-align-center u-clearfix u-image u-section-1" id="carousel_c3b3">
+
+
+
+
+
+
+      <div class="u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
+        <div class="u-gutter-0 u-layout">
+          <div class="u-layout-row">
+            <div class="u-size-60">
+              <div class="u-layout-col">
+                <div class="u-size-40">
+                  <div class="u-layout-row">
+                    <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
+                      <div class="u-container-layout u-container-layout-1">
+                        <h1 class="u-hover-feature u-radius-10 u-text u-text-custom-color-1 u-title u-text-1"><span id="name"></span><br>YOUR SCORE IS&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span id="score"></span>
+                        </h1>
+                        <p class="u-large-text u-text u-text-default-xl u-text-variant u-text-2">It is seen that you spend most of your time on:<div class="category"><ul id="categories"></ul></div></p>
+
+                        <script>
+                          var name = localStorage.getItem("name");
+                          var score = localStorage.getItem("score");
+                          var categories = localStorage.getItem("categories");
+                          document.getElementById("name").innerHTML = name;
+                          document.getElementById("score").innerHTML = score;
+                          var categoriesList = document.getElementById("categories");
+                          categories = JSON.parse(categories); // convert string to array
+                          for (var i = 0; i < categories.length; i++) {
+                            var category = categories[i];
+                            var listItem = document.createElement("li");
+                            listItem.innerHTML = category;
+                            categoriesList.appendChild(listItem);
+                          }
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-size-20">
+                  <div class="u-layout-row">
+                    <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-28 u-layout-cell-2">
+                      <div class="u-container-layout u-container-layout-2">
+                        <span class="u-file-icon u-hover-feature u-icon u-text-palette-1-dark-2 u-icon-1" data-href="Improvement-tips.html" data-target="_blank">
+                          <img src="images/9482916-93a401cc.png" alt=""></span>
+                          <h5 class="u-hover-feature u-text u-text-3">
+                          <a class="u-active-none u-btn u-button-link u-button-style u-hover-feature u-hover-none u-none u-text-palette-1-dark-2 u-btn-1" href="Improvement-tips.html" target="_blank">‏‏‎‏‏‎‏‏‎‏‏‎<div class="tip">TIPS</div></a>
+                          </h5>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-layout-cell u-size-32 u-layout-cell-3">
+                      <div class="u-container-layout u-container-layout-3"><span class="u-hover-feature u-icon u-icon-circle u-text-palette-1-dark-2 u-icon-2" data-href="Help-tools.html" data-target="_blank"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 295.238 295.238" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c8c9"></use></svg><svg class="u-svg-content" viewBox="0 0 295.238 295.238" x="0px" y="0px" id="svg-c8c9" style="enable-background:new 0 0 295.238 295.238;"><g><g><g><path d="M277.462,0.09l-27.681,20.72l-27.838,64.905h-22.386l-8.79-19.048h5.743c10.505,0,19.048-8.452,19.048-18.957V28.571     h9.524V0H196.51v28.571h9.524V47.71c0,5.248-4.271,9.433-9.524,9.433h-10.138L174.2,30.81l14.581-7.267L141.038,3.095     l-11.224,39.281c-0.305-23.371-19.386-42.29-42.829-42.29c-23.633,0-42.857,19.224-42.857,42.857     c0,14.281,7.233,27.676,19.048,35.595v7.176H51.643L50.9,89.619c-2.314,12.005-2.529,24.343-0.638,36.648l-32.486,57.905     l35.876,8.195v60.014h47.619v42.857h114.286v-66.357c33.333-23.581,52.371-61.495,52.343-101.943l0.01-17.371     c0-6.548-0.605-13.276-1.824-19.905l-0.705-3.948h-9.348l21.429-51.338V0.09z M206.033,19.138V9.614h9.524v9.524H206.033z      M189.067,85.714h-18.062l-8.657-19.048h17.929L189.067,85.714z M147.219,16.119l18.929,8.11l-4.467,2.19l14.2,30.724h-17.862     l-11.605-25.471l-4.262,2.152L147.219,16.119z M160.543,85.715h-21.176v-9.433c0-5.252,4.271-9.614,9.524-9.614h2.995v-0.001     L160.543,85.715z M141.843,44.652l5.776,12.71c-9.905,0.667-17.776,8.848-17.776,18.919v9.433h-19.048v-7.176     c9.529-6.386,15.995-16.352,18.176-27.452L141.843,44.652z M53.653,42.948c0-18.376,14.957-33.333,33.333-33.333     c18.376,0,33.333,14.957,33.333,33.333c0,11.829-6.39,22.881-16.671,28.838l-2.376,1.371v12.557h-9.524V56.352     c5.529-1.971,9.524-7.21,9.524-13.41c0-7.876-6.41-14.286-14.286-14.286c-7.876,0-14.286,6.411-14.286,14.287     c0,6.2,3.995,11.438,9.524,13.41v29.362H72.7V73.157l-2.376-1.376C60.043,65.824,53.653,54.776,53.653,42.948z M86.986,47.71     c-2.629,0-4.762-2.139-4.762-4.762c0-2.629,2.133-4.762,4.762-4.762c2.629,0,4.762,2.133,4.762,4.762S89.615,47.71,86.986,47.71z      M257.366,95.239c0.691,4.761,1.039,9.59,1.039,14.285l0.01,17.405c0.029,38.148-18.795,73.871-50.286,95.552l-2.095,1.429     v61.805h-95.238v-42.857h-47.62v-58.086l-30.862-7.043l27.876-49.7l-0.271-1.7c-1.771-10.419-1.871-21.567-0.333-31.09h3.59     h47.619H257.366z M245.714,85.714H232.3l23.738-55.343l10.557,5.257L245.714,85.714z M267.938,25.714l-5.267-2.633l5.267-3.943     V25.714z"></path><path d="M96.51,123.81c-7.876,0-14.286-4.762-14.286-14.286H72.7c0,14.286,10.681,23.81,23.81,23.81     c13.129,0,23.81-9.524,23.81-23.81h-9.524C110.795,119.048,104.386,123.81,96.51,123.81z"></path>
+</g>
+</g>
+</g></svg></span>
+                        <h5 class="u-text u-text-palette-1-dark-2 u-text-4">
+                          <a class="u-active-none u-btn u-button-link u-button-style u-hover-feature u-hover-none u-none u-btn-2" href="Help-tools.html" target="_blank">‏‏‎<div class="tool">TOOLS</div></a>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="u-large-text u-text u-text-variant u-text-5">Your performance is fine. But you could do so much better! Follow the tips and tools mentioned below. Remember that small changes can make a big difference. By following the tips and using the tools provided, you can increase your productivity and achieve better results. Keep up the good work and continue to strive for improvement. With dedication and effort, you can reach your full potential and achieve great success.
+      </p>
+      <img class="u-image u-image-contain u-image-default u-image-1" src="images/rm3.png" alt="" data-image-width="1298" data-image-height="730" data-animation-name="customAnimationIn" data-animation-duration="1000">
+      <p class="u-large-text u-text u-text-variant u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="X">Your score meter </p>
+    </section>
+</body></html>
